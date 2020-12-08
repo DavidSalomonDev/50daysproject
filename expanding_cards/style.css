@@ -21,13 +21,13 @@ body {
     margin: 10px;
 }
 
-.project-title {
+.project-title, .home {
     font-family: 'Raleway', sans-serif;
     font-size: 32px;
+    margin: 10px;
 }
 
-.panels,
-.container {
+.panels{
     display: flex;
     width: 90vw;
 }
