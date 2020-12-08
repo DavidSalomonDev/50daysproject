@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.project-title{
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
+}
+
+li{
+    font-family: 'Muli', sans-serif;
+    font-size: 20px;
+}
