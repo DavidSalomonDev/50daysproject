@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+body {
+    font-family: 'Muli', sans-serif;
+    overflow: hidden;
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 5vh 5fr 3vh;
+    gap: 0px 0px;
+    grid-template-areas:
+        "header header header"
+        "container container container"
+        "footer footer footer";
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: #153466;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.header .header-title{
+    font-size: 90%;
+    color: rgb(214, 211, 211);
+}
+
+.header .header-home{
+    text-decoration: none;
+    font-size: 90%;
+    color: rgb(214, 211, 211);
+    transition: ease .4s all;
+}
+.header .header-home:hover{
+    font-size: 100%;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.container {
+    grid-area: container;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #262626;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.footer p{
+    font-size: 75%;
+    text-align: center;
+    color: rgb(214, 211, 211);
+}
+
+/* --- End of base CSS */
+
+.container{
+    background-color: steelblue;
+    color: #fff;
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.4);
+    padding: 20px 40px;
+    border-radius: 5px;
+}
+
+.login h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login a{
+    text-decoration: none;
+    color: lightblue;
+}
+
+.btn{
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    background: lightblue;
+    padding: 15px;
+    font-family: inherit;
+    font-size: 16px;
+    border: 0;
+    border-radius: 5px;
+}
+
+.btn:focus{
+    outline: 0;
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
+
+.text{
+    margin-top: 30px;
+}
+
+.form-control{
+    position: relative;
+    margin: 20px 0 40px;
+    width: 300px;
+}
+
+.form-control input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #fff solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #fff;
+}
+
+.form-control input:focus,
+.form-control input:valid{
+    outline: 0;
+    border-bottom-color: lightblue;
+}
+
+.form-control label{
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+}
+
+.form-control label span{
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span{
+    color: lightblue;
+    transform: translateY(-30px);
+    font-weight: bold;
+    font-size: 150%;
+} 
