@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+body {
+    font-family: 'Muli', sans-serif;
+    overflow: hidden;
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 5vh 5fr 3vh;
+    gap: 0px 0px;
+    grid-template-areas:
+        "header header header"
+        "container container container"
+        "footer footer footer";
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: #153466;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.header .header-title{
+    font-size: 90%;
+    color: rgb(214, 211, 211);
+}
+
+.header .header-home{
+    text-decoration: none;
+    font-size: 90%;
+    color: rgb(214, 211, 211);
+    transition: ease .4s all;
+}
+.header .header-home:hover{
+    font-size: 100%;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.container {
+    grid-area: container;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #262626;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.footer p{
+    font-size: 75%;
+    text-align: center;
+    color: rgb(214, 211, 211);
+}
+
+/* --- End of base CSS */
+
+.container{
+    background-color: #e1e1e1;
+    text-align: center;
+}
+
+.key{
+    border: 1px solid #999;
+    background-color: #eee;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px;
+    flex-direction: column;
+    margin: 10px;
+    min-width: 150px;
+    position: relative;
+}
+
+.key small{
+    position: absolute;
+    top: -24px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    color: #555;
+    font-size: 14px;
+}
