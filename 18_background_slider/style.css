@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Muli', sans-serif;
+    overflow: hidden;
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 5vh 5fr 3vh;
+    gap: 0px 0px;
+    grid-template-areas:
+        "header header header"
+        "container container container"
+        "footer footer footer";
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: #153466;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.header .header-title{
+    font-size: 90%;
+    color: rgb(214, 211, 211);
+}
+
+.header .header-home{
+    text-decoration: none;
+    font-size: 90%;
+    color: rgb(214, 211, 211);
+    transition: ease .4s all;
+}
+.header .header-home:hover{
+    font-size: 100%;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.container {
+    grid-area: container;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #262626;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.footer p{
+    font-size: 75%;
+    text-align: center;
+    color: rgb(214, 211, 211);
+}
+
+/* --- End of base CSS */
+
+.container{
+    /* background-image: url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80'); */
+    background-size: cover;
+    background-position: center center;
+    transition: 0.4s ease;
+}
+
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 0;
+}
+
+.slider-container{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    height: 70vh;
+    width: 70vw;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide{
+    opacity: 0;
+    height: 100vh;
+    width: 100vw;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top: -15vh;
+    left: -15vw;
+    transition: 0.4s ease;
+
+    
+}
+
+.slide.active{
+    opacity: 1;
+    z-index: 1000000;
+}
+
+.arrow{
+    background-color: transparent;
+    position: fixed;
+    padding: 20px;
+    font-size: 30px;
+    border: 2px solid orange;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.arrow:focus{
+    outline: 0;
+}
+
+.left-arrow{
+    left: calc(15vw - 65px);
+}
+.right-arrow{
+    right: calc(15vw - 65px);
+}
