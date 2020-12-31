@@ -1,11 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
-
-:root{
-    --primary-color: #153466;
-}
 
 body {
     font-family: 'Muli', sans-serif;
@@ -27,7 +20,7 @@ body {
 
 .header {
     grid-area: header;
-    background-color: var(--primary-color);
+    background-color: #153466;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -74,77 +67,41 @@ body {
 }
 
 /* --- End of base CSS */
-.container {
-    display: flex;
-    width: 90vw;
+
+.container{
+    background-color: #333;
 }
 
-.container h3{
-    position: fixed;
-    top: 10%;
-    font-family: 'Raleway', sans-serif;
-    font-size: 200%;
+button{
+    position: relative;
+    background-color: purple;
+    color: #fff;
+    border: 1px purple solid;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 120px 230px;
+    overflow: hidden;
+    margin: 10px 0;
 }
 
-.menu{
-    display: flex;
-    margin: 10px;
-}
-
-.project-title, .home{
-    font-family: 'Raleway', sans-serif;
-    font-size: 32px;
-    margin: 10px;
-    
-}
-
-ol {
-    list-style: none; 
-    counter-reset: li
-}
-
-li::before {
-    content: counter(li)'.'; 
-    color: var(--primary-color);
-    display: inline-block; 
-    width: 2.5em;
-    margin-left: -1em;
-    font-size: 75%;
-}
-
-
-
-.list{
-    position: absolute;
-    top: 20%;
-    left: 30%;
-    width: 50vw;
-    height: 60vh;
-    overflow: scroll;
-}
-
-li{
-    counter-increment: li;
-    font-family: 'Muli', sans-serif;
-    font-size: 24px;
-}
-
-li a,
-li a:visited{
-    text-decoration: none;
-    color: var(--primary-color);
-    font-weight: bold;
-    transition: .3s ease;
-}
-
-li a:hover,
-li a:focus{
-    font-size: 110%;
+button:focus{
     outline: none;
 }
 
-li a:active{
-    text-decoration: none;
-    transform: scale(0.98);
-    color: blue;
+button .circle{
+    position: absolute;
+    background-color: #fff;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    animation: scale .5s ease-out;
+}
+
+@keyframes scale{
+    to{
+        transform: translate(-50%,-50%) scale(3);
+        opacity: 0;
+    }
 }
