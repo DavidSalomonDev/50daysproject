@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    overflow: hidden;
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 5vh 5fr 3vh;
+    gap: 0px 0px;
+    grid-template-areas:
+        "header header header"
+        "container container container"
+        "footer footer footer";
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: #153466;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.header .header-title {
+    font-size: 90%;
+    color: rgb(214, 211, 211);
+}
+
+.header .header-home {
+    text-decoration: none;
+    font-size: 90%;
+    color: rgb(214, 211, 211);
+    transition: ease .4s all;
+}
+
+.header .header-home:hover {
+    font-size: 100%;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.container {
+    grid-area: container;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #262626;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.footer p {
+    font-size: 75%;
+    text-align: center;
+    color: rgb(214, 211, 211);
+}
+
+/* --- End of base CSS */
+
+.container {
+    background-color: #ECF0F1;
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+.card {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 350px;
+}
+
+.card-header {
+    height: 200px;
+}
+
+.card-header img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.card-content {
+    background-color: #fff;
+    padding: 30px;
+}
+
+.card-title {
+    height: 20px;
+    margin: 0;
+}
+
+.card-excerpt {
+    color: #777;
+    margin: 10px 0 20px;
+}
+
+.author {
+    display: flex;
+}
+
+.profile-img {
+    border-radius: 50%;
+    overflow: hidden;
+    height: 40px;
+    width: 40px;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 10px;
+    width: 100px;
+}
+
+.author-info small {
+    color: #aaa;
+    margin-top: 5px;
+}
+
+.animated-bg {
+    background-image: linear-gradient(to right,
+            #f6f7f8 0%,
+            #edeef1 10%,
+            #f6f7f8 20%,
+            #f6f7f8 100%);
+    background-size: 200% 100%;
+    animation: bgPos 1s linear infinite;
+}
+
+.animated-bg-text{
+    border-radius: 50px;
+    display: inline-block;
+    margin: 0;
+    height: 10px;
+    width: 100%;
+}
+
+@keyframes bgPos{
+    0%{
+        background-position: 50% 0;
+    }
+
+    100%{
+        background-position: -150% 0;
+    }
+}
