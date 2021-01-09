@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    overflow: hidden;
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 5vh 5fr 3vh;
+    gap: 0px 0px;
+    grid-template-areas:
+        "header header header"
+        "container container container"
+        "footer footer footer";
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: #153466;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.header .header-title{
+    font-size: 90%;
+    color: rgb(214, 211, 211);
+}
+
+.header .header-home{
+    text-decoration: none;
+    font-size: 90%;
+    color: rgb(214, 211, 211);
+    transition: ease .4s all;
+}
+.header .header-home:hover{
+    font-size: 100%;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.container {
+    grid-area: container;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #262626;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.footer p{
+    font-size: 75%;
+    text-align: center;
+    color: rgb(214, 211, 211);
+}
+
+/* --- End of base CSS */
+
+.container{
+    background-color: salmon;
+}
+
+.content{
+    position: absolute;
+    bottom: 30px;
+    background: rgba(0,0,0,0.1);
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+input{
+    width: 50px;
+    padding: 5px;
+    font-size: 18px;
+    background-color: darksalmon;
+    border: none;
+    text-align: center;
+}
+
+input:focus{
+    outline: none;
+}
