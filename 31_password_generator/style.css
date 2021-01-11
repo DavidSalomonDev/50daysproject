@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    overflow: hidden;
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 5vh 5fr 3vh;
+    gap: 0px 0px;
+    grid-template-areas:
+        "header header header"
+        "container container container"
+        "footer footer footer";
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: #153466;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.header .header-title{
+    font-size: 90%;
+    color: rgb(214, 211, 211);
+}
+
+.header .header-home{
+    text-decoration: none;
+    font-size: 90%;
+    color: rgb(214, 211, 211);
+    transition: ease .4s all;
+}
+.header .header-home:hover{
+    font-size: 100%;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.container {
+    grid-area: container;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #262626;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.footer p{
+    font-size: 75%;
+    text-align: center;
+    color: rgb(214, 211, 211);
+}
+
+/* --- End of base CSS */
+
+.container{
+    background-color: #3b3b98;
+    color: white;
+}
+
+h2{
+    margin: 10px 0 20px;
+    text-align: center;
+}
+
+.content{
+    background-color: #23235b;
+    box-shadow: 0px 2px 10px rgba(255,255,255,0.2);
+    padding: 20px;
+    width: 350px;
+    max-width: 100%;
+}
+
+.result-container{
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 12px 10px;
+    height: 50px;
+    width: 100%;
+}
+
+.result-container #result{
+    word-wrap: break-word;
+    max-width: calc(100% - 40px);
+}
+
+.btn{
+    border: none;
+    background-color: #3b3b98;
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.btn-large{
+    display: block;
+    width: 100%;
+}
+
+.result-container .btn{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.setting{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
