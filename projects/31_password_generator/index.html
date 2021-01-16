@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://50daysproject.vercel.app/projects/31_password_generator/style.css">
+    <title>31. Password Generator | 50 days coding challenge</title>
+    <link rel="shortcut icon" href="https://50daysproject.vercel.app/ds.png" type="image/png">
+</head>
+
+<body>
+    <div class="grid-container">
+        <header class="header">
+            <a href="https://50daysproject.vercel.app/" class="header-home">Home</a>
+            <h3 class="header-title">31. Password Generator</h3>
+        </header>
+        <main class="container">
+            <div class="content">
+                <h2>Password Generator</h2>
+                <div class="result-container">
+                    <span id="result"></span>
+                    <button class="btn" id="clipboard">
+                        <i class="far fa-clipboard"></i>
+                    </button>
+                </div>
+                <div class="settings">
+                    <div class="setting">
+                        <label>Password Length</label>
+                        <input type="number" id="length" min="4" max="20" value="20">
+                    </div>
+                    <div class="setting">
+                        <label>Include uppercase letters</label>
+                        <input type="checkbox" id="uppercase" checked>
+                    </div>
+                    <div class="setting">
+                        <label>Include lowercase letters</label>
+                        <input type="checkbox" id="lowercase" checked>
+                    </div>
+                    <div class="setting">
+                        <label>Include numbers</label>
+                        <input type="checkbox" id="numbers" checked>
+                    </div>
+                    <div class="setting">
+                        <label>Include symbols</label>
+                        <input type="checkbox" id="symbols" checked>
+                    </div>
+                </div>
+                <button class="btn btn-large" id="generate">
+                    Generate Password
+                </button>
+            </div>
+        </main>
+        <footer class="footer">
+            <p>Copyright by davidsalomon, this is part of the 50 projects in 50 days by Brad Traversy available on Udemy
+            </p>
+        </footer>
+    </div>
+    <script src="https://50daysproject.vercel.app/projects/31_password_generator/script.js"></script>
+</body>
+
+</html>
