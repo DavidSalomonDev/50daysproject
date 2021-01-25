@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 5vh 5fr 3vh;
+    gap: 0px 0px;
+    grid-template-areas:
+        "header header header"
+        "container container container"
+        "footer footer footer";
+    height: 100vh;
+}
+
+.header {
+    font-family: 'Muli', sans-serif;
+    grid-area: header;
+    background-color: #153466;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.header .header-title{
+    font-size: 90%;
+    color: rgb(214, 211, 211);
+}
+
+.header .header-home{
+    text-decoration: none;
+    font-size: 90%;
+    color: rgb(214, 211, 211);
+    transition: ease .4s all;
+}
+.header .header-home:hover{
+    font-size: 100%;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.container {
+    grid-area: container;
+    font-family: 'Press Start 2P', sans-serif;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    background-color: #516dff;
+    color: #fff;
+}
+
+.footer {
+    font-family: 'Muli', sans-serif;
+
+    grid-area: footer;
+    background-color: #262626;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.footer p{
+    font-size: 75%;
+    text-align: center;
+    color: rgb(214, 211, 211);
+}
+
+/* --- End of base CSS */
+
+a{
+    color: #fff;
+}
+
+h1{
+    line-height: 1.4;
+}
+
+.btn{
+    border: 0;
+    background-color: #fff;
+    color: #516dff;
+    padding: 15px 20px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.btn:hover{
+    opacity: 0.9;
+}
+.btn:focus{
+    outline: 0;
+}
+
+.screen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    width: 100vw;
+    transition: margin 0.5s ease-out;
+}
+
+.screen.up{
+    margin-top: -90vh;
+}
+
+.insects-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.insects-list li{
+    margin: 10px;
+}
+
+.choose-insect-btn{
+    background-color: transparent;
+    border: 2px solid white;
+    color: #fff;
+    cursor: pointer;
+    font-family: inherit;
+    width: 150px;
+    height: 150px;
+}
+
+.choose-insect-btn:hover{
+    background-color: #fff;
+    color: #516dff;
+}
+
+.choose-insect-btn:active{
+    background-color: rgba(255,255,255,0.7);
+}
+
+.choose-insect-btn img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.game-container{
+    position: relative;
+}
+
+.time,
+.score{
+    position: absolute;
+    top: 20px;
+}
+
+.time{
+    left: 20px;
+}
+
+.score{
+    right: 20px;
+}
+
+.message{
+    line-height: 1.7;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    padding: 20px;
+    z-index: 100;
+    text-align: center;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,150%);
+    transition: transform 0.4s ease-in;
+}
+
+.message.visible{
+    opacity: 1;
+    transform: translate(-50%,150%);
+
+}
+
+.insect{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transform: translate(-50%,-50%) scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.insect.caught{
+    transform: translate(-50%,-50%) scale(0);
+}
+
+.insect img{
+    width: 100px;
+    height: 100px;
+}
